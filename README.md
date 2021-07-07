@@ -3,9 +3,9 @@
 This exporter is based on the work by https://github.com/tedder/miner_exporter.  The Pro of this project is it doesn't require setting up Grafana / Prom and let's you easily setup alerts. 
 
 
-## Live Dashboard Preview ( on Testnet )
+## Live Dashboard Preview ( From Helium Testnet )
 
-https://my.appoptics.com/s/public/qcptw1gg5
+https://my.appoptics.com/s/public/qcptw1gg5?duration=86400
 
 ## Dashboard Screenshot
 
