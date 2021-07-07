@@ -5,7 +5,7 @@ This exporter is based on the work by https://github.com/tedder/miner_exporter. 
 
 ## Live Dashboard Preview ( on Testnet )
 
-https://my.appoptics.com/s/dashboards/1350465?duration=86400
+https://my.appoptics.com/s/public/qcptw1gg5
 
 ## Dashboard Screenshot
 
