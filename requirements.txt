@@ -1,0 +1,5 @@
+psutil
+docker
+requests
+python-dateutil
+appoptics_metrics

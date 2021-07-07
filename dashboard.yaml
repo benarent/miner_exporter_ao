@@ -1,0 +1,215 @@
+---
+name: HNT (testnet)
+default_tag_set_id: 
+charts:
+- name: HNT Staked Validators
+  type: bignumber
+  streams:
+  - group_function: average
+    summary_function: average
+    tags:
+    - name: chain
+      values:
+      - testnet
+    metric: hnt.chain_stats.staked_validators
+  label: Validators
+  use_last_value: true
+  format: ".0f"
+  enable_format: true
+- name: Testnet Blockchain Height
+  type: line
+  streams:
+  - group_function: average
+    summary_function: average
+    tags:
+    - name: hotspot
+      values:
+      - salty-ivory-griffin
+    metric: hnt.miner.height
+  min: 15000.0
+  label: Height
+- name: " Connections to Validators"
+  type: line
+  streams:
+  - group_function: average
+    summary_function: average
+    tags:
+    - grouped: true
+      values:
+      - salty-ivory-griffin
+      name: hotspot
+    metric: hnt.connections
+- name: CPU
+  type: line
+  streams:
+  - group_function: average
+    summary_function: average
+    metric: hnt.system_usage.cpu
+  - group_function: average
+    summary_function: average
+    metric: hnt.system_usage.cpu.idle
+  - group_function: average
+    summary_function: average
+    metric: hnt.system_usage.cpu.system
+  - group_function: average
+    summary_function: average
+    metric: hnt.system_usage.cpu.user
+- name: " In Consenous "
+  type: bignumber
+  streams:
+  - group_function: average
+    summary_function: average
+    tags:
+    - name: hotspot
+      values:
+      - salty-ivory-griffin
+    metric: hnt.miner.incon
+  min: 0.0
+  thresholds:
+  - operator: "="
+    value: 0
+    type: red
+  use_last_value: true
+  format: 
+  enable_format: false
+- name: TNT Balance
+  type: stacked
+  streams:
+  - group_function: average
+    summary_function: average
+    tags:
+    - name: hotspot
+      values:
+      - salty-ivory-griffin
+    metric: hnt.balance
+- name: Disk Space Used
+  type: stacked
+  streams:
+  - group_function: average
+    summary_function: average
+    metric: hnt.system_usage.disk.used
+- name: HBBFT
+  type: line
+  streams:
+  - group_function: average
+    summary_function: average
+    tags:
+    - name: hotspot
+      values:
+      - salty-ivory-griffin
+    metric: hnt.hbbft_perf.BBA_last
+  - group_function: average
+    summary_function: average
+    tags:
+    - name: hotspot
+      values:
+      - salty-ivory-griffin
+    metric: hnt.hbbft_perf.BBA_votes
+  - group_function: average
+    summary_function: average
+    tags:
+    - name: hotspot
+      values:
+      - salty-ivory-griffin
+    metric: hnt.hbbft_perf.hbbft_perf
+  - group_function: average
+    summary_function: average
+    tags:
+    - name: hotspot
+      values:
+      - salty-ivory-griffin
+    metric: hnt.hbbft_perf.penalty
+  - group_function: average
+    summary_function: average
+    tags:
+    - name: hotspot
+      values:
+      - salty-ivory-griffin
+    metric: hnt.hbbft_perf.seen_last
+  - group_function: average
+    summary_function: average
+    tags:
+    - name: hotspot
+      values:
+      - salty-ivory-griffin
+    metric: hnt.hbbft_perf.seen_total
+  - group_function: average
+    summary_function: average
+    tags:
+    - name: hotspot
+      values:
+      - salty-ivory-griffin
+    metric: hnt.hbbft_perf.seen_votes
+  - group_function: average
+    summary_function: average
+    tags:
+    - name: hotspot
+      values:
+      - salty-ivory-griffin
+    metric: hnt.hbbft_perf.tenure
+- name: Ledger Penalties
+  type: line
+  streams:
+  - group_function: average
+    summary_function: average
+    metric: hnt.ledger_penalties.BBA_last
+  - group_function: average
+    summary_function: average
+    metric: hnt.ledger_penalties.dkg
+  - group_function: average
+    summary_function: average
+    metric: hnt.ledger_penalties.performance
+  - group_function: average
+    summary_function: average
+    metric: hnt.ledger_penalties.tenure
+- name: Block Age
+  type: line
+  streams:
+  - group_function: average
+    summary_function: average
+    tags:
+    - name: hotspot
+      values:
+      - salty-ivory-griffin
+    metric: hnt.blockage
+layout:
+- col: 1
+  row: 1
+  width: 4
+  height: 2
+- col: 5
+  row: 1
+  width: 4
+  height: 2
+- col: 3
+  row: 3
+  width: 4
+  height: 2
+- col: 1
+  row: 7
+  width: 4
+  height: 2
+- col: 1
+  row: 3
+  width: 2
+  height: 2
+- col: 7
+  row: 3
+  width: 4
+  height: 2
+- col: 5
+  row: 7
+  width: 4
+  height: 2
+- col: 1
+  row: 5
+  width: 4
+  height: 2
+- col: 5
+  row: 5
+  width: 4
+  height: 2
+- col: 9
+  row: 1
+  width: 4
+  height: 2
