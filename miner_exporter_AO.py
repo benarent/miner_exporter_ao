@@ -30,7 +30,7 @@ api = appoptics_metrics.connect(os.environ['AO_API'])
 q = api.new_queue()
 
 # time to sleep between scrapes
-UPDATE_PERIOD = int(os.environ.get('UPDATE_PERIOD', 10))
+UPDATE_PERIOD = int(os.environ.get('UPDATE_PERIOD', 80))
 VALIDATOR_CONTAINER_NAME = os.environ.get('VALIDATOR_CONTAINER_NAME', 'validator')
 # for testnet, https://testnet-api.helium.wtf/v1
 API_BASE_URL = os.environ.get('API_BASE_URL', 'https://api.helium.io/v1')
@@ -502,5 +502,5 @@ if __name__ == '__main__':
       log.error(f"stats loop failed with a docker error.", exc_info=ex)
 
 
-    # sleep 10 seconds
+    # sleep 120  seconds
     time.sleep(UPDATE_PERIOD)

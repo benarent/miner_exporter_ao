@@ -55,8 +55,8 @@ docker build --no-cache -t hnt-ao .
 docker image ls
 
 # Tag image
-docker tag f7e3e95c7483 quay.io/benarent/hnt-ao:0.0.4
+docker tag f7e3e95c7483 quay.io/benarent/hnt-ao:0.0.7
 
 # docker push quay.io/benarent/hnt-ao
-docker push quay.io/benarent/hnt-ao:0.0.4
+docker push quay.io/benarent/hnt-ao:0.0.7
 ```
