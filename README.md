@@ -39,7 +39,7 @@ docker stop miner_exporter_ao && docker rm miner_exporter_ao
 
 # AppOptics Dashboard Setup 
 
-I've included a barebone `dashboard.yaml` which can be used to setup a prefrabricated Helium Dashboard. 
+I've included a barebone `dashboard.yaml` which can be used to setup a pre-frabricated Helium Dashboard. 
 
 
 ## Building / Dev 
@@ -55,8 +55,8 @@ docker build --no-cache -t hnt-ao .
 docker image ls
 
 # Tag image
-docker tag f7e3e95c7483 quay.io/benarent/hnt-ao:0.0.7
+docker tag f7e3e95c7483 quay.io/benarent/hnt-ao:0.0.8
 
 # docker push quay.io/benarent/hnt-ao
-docker push quay.io/benarent/hnt-ao:0.0.7
+docker push quay.io/benarent/hnt-ao:0.0.8
 ```
