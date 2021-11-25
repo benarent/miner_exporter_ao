@@ -182,7 +182,10 @@ def stats():
 
 def safe_get_json(url):
   try:
-    ret = requests.get(url)
+    headers = {
+    'User-Agent': 'teddy-miner'
+    }
+    ret = requests.get(url, headers=headers)
     if not ret.status_code == requests.codes.ok:
       log.error(f"bad status code ({ret.status_code}) from url: {url}")
       return
